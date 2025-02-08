@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-version: 2
-=======
+
 version: 2  # Keep only one version declaration
 
 sources:
