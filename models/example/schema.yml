@@ -20,7 +20,7 @@ models:
           - unique
           - not_null
 
-- name: department_It
+- name: it_department
     description: "IT Employees"
     columns:
       - name: employee_id
