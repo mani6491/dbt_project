@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 version: 2
+=======
+version: 2  # Keep only one version declaration
+
+sources:
+  - name: hr
+    database: MYDB1  # Ensure correct case-sensitive database name
+    schema: MYSCHEMA1
+    tables:
+      - name: employees
+      - name: departments
+>>>>>>> a2c366e (Added new dbt models)
 
 models:
   - name: my_first_dbt_model
@@ -6,7 +18,11 @@ models:
     columns:
       - name: id
         description: "The primary key for this table"
+<<<<<<< HEAD
         tests:  # Corrected 'data_tests' to 'tests'
+=======
+        tests:
+>>>>>>> a2c366e (Added new dbt models)
           - unique
           - not_null
 
@@ -19,7 +35,11 @@ models:
           - unique
           - not_null
 
+<<<<<<< HEAD
   - name: it_department  # FIXED: Now correctly indented under 'models'
+=======
+  - name: it_department
+>>>>>>> a2c366e (Added new dbt models)
     description: "IT Employees"
     columns:
       - name: employee_id

@@ -1,12 +1,11 @@
 {{ config(materialized='table') }}
 
-select
+SELECT
     employee_id,
     first_name,
     last_name,
-    departments.department_id,
     department_name
-from "mydb1"."myschema1"."employees"
-inner join "mydb1"."myschema1"."departments"
-on employees.department_id = departments.department_id
-where department_name = 'IT'
+FROM {{ source('hr', 'employees') }}
+JOIN {{ source('hr', 'departments') }}
+ON employees.department_id = departments.department_id
+WHERE department_name = 'IT'
