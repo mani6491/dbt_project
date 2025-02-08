@@ -1,4 +1,3 @@
-
 version: 2  # Keep only one version declaration
 
 sources:
@@ -8,7 +7,6 @@ sources:
     tables:
       - name: employees
       - name: departments
->>>>>>> a2c366e (Added new dbt models)
 
 models:
   - name: my_first_dbt_model
@@ -16,11 +14,7 @@ models:
     columns:
       - name: id
         description: "The primary key for this table"
-<<<<<<< HEAD
-        tests:  # Corrected 'data_tests' to 'tests'
-=======
-        tests:
->>>>>>> a2c366e (Added new dbt models)
+    tests:
           - unique
           - not_null
 
@@ -33,12 +27,18 @@ models:
           - unique
           - not_null
 
-<<<<<<< HEAD
-  - name: it_department  # FIXED: Now correctly indented under 'models'
-=======
+
   - name: it_department
->>>>>>> a2c366e (Added new dbt models)
     description: "IT Employees"
+    columns:
+      - name: employee_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+ - name: sales_department
+    description: "sales Employees"
     columns:
       - name: employee_id
         description: "The primary key for this table"
