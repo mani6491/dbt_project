@@ -6,7 +6,7 @@ first_name,
 last_name,
 departments.department_id,
 department_name
-from "employees" inner join "departments"
+from "mydb1"."myschema1"."employees" inner join "mydb1"."myschema1"."departments"
 where employees.department_id=departments.department_id
 and department_name ='IT'
 
