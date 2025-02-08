@@ -1,5 +1,10 @@
 version: 2  # Keep only one version declaration
 
+models:
+  dwh_prj:
+    database: MYDB1  # ✅ Ensure this is a writable database
+    schema: MYSCHEMA1  # ✅ Ensure this is correct and writable
+
 sources:
   - name: hr
     database: MYDB1  # Ensure correct case-sensitive database name
@@ -14,12 +19,12 @@ models:
     columns:
       - name: id
         description: "The primary key for this table"
-    tests:
+        tests:
           - unique
           - not_null
 
   - name: my_second_dbt_model
-    description: "A starter dbt model"
+    description: "A secondary dbt model"
     columns:
       - name: id
         description: "The primary key for this table"
@@ -27,9 +32,8 @@ models:
           - unique
           - not_null
 
-
   - name: it_department
-    description: "IT Employees"
+    description: "IT Employees data model"
     columns:
       - name: employee_id
         description: "The primary key for this table"
@@ -37,8 +41,8 @@ models:
           - unique
           - not_null
 
- - name: sales_department
-    description: "sales Employees"
+  - name: sales_department
+    description: "Sales Employees data model"
     columns:
       - name: employee_id
         description: "The primary key for this table"
